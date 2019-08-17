@@ -1,0 +1,15 @@
+pseudo code....
+Home page
+    Route to survey
+    Route to API Friends List
+    Route to  GitHub Repo
+Survey page
+    Collect user inputs
+    Push to array in friends.js
+    modal displays the name and image of "friend" with closest value to new object's totalDifference
+friends.js
+    holds an array of objects of "friends"
+    calculate "totalDifference" of new object with all existing objects in Friends array
+    find "friend" with closest value to new object's totalDifference
+
+ 
