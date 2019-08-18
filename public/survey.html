@@ -51,8 +51,8 @@
         </div>
         <!--Question 1-->
             <div class="row">
-                <div class="column-lg-12">
-                    <div class="form-group">
+                <div class="col">
+                  <div class="form-group">
                         <label for="q1"><strong>Question 1</strong></label>
                         <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                         <select class="custom-select col-md-6" id="q1">
@@ -64,13 +64,13 @@
                             <option value="5">5 (Strongly Agree)</option>
                         </select>
                       </div>
-                </div>
-            </div>
+                      </div>
+                </div>           
         <!--Question 2-->
             <div class="row">
-                <div class="column-lg-12">
-                    <div class="form-group">
-                        <label for="q2"><strong>Question 2</strong></label>
+                <div class="col"> 
+                    <div class="form-group">                   
+                        <label for="q2"><strong>Question 2</strong></label>   
                           <p>Generally speaking, you rely more on your experience than your imagination.</p>
                           <select class="custom-select col-md-6" id="q2">
                             <option selected>Select one</option>
@@ -80,12 +80,12 @@
                             <option value="4">4</option>
                             <option value="5">5 (Strongly Agree)</option>
                           </select>
+                        </div>
                     </div>                 
-                </div>
-            </div>
+                </div>            
         <!--Question 3-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q3"><strong>Question 3</strong></label>
                         <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
@@ -102,7 +102,7 @@
             </div>
         <!--Question 4-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q4"><strong>Question 4</strong></label>
                         <p>You rarely do something just out of sheer curiosity.</p>
@@ -119,7 +119,7 @@
             </div>
         <!--Question 5-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q5"><strong>Question 5</strong></label>
                         <p>People can rarely upset you.</p>
@@ -136,7 +136,7 @@
             </div>
         <!--Question 6-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q6"><strong>Question 6</strong></label>
                         <p>It is often difficult for you to relate to other people’s feelings.</p>
@@ -153,7 +153,7 @@
           </div>
         <!--Question 7-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q7"><strong>Question 7</strong></label>
                         <p>In a discussion, truth should be more important than people’s sensitivities.</p>
@@ -170,7 +170,7 @@
             </div>
         <!--Question 8-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q8"><strong>Question 8</strong></label>
                         <p>You rarely get carried away by fantasies and ideas.</p>
@@ -187,7 +187,7 @@
             </div>
         <!--Question 9-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q9"><strong>Question 9</strong></label>
                         <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
@@ -204,7 +204,7 @@
             </div>
         <!--Question 10-->
             <div class="row">
-                <div class="column-lg-12">
+                <div class="col">
                     <div class="form-group">
                         <label for="q10"><strong>Question 10</strong></label>
                         <p>You feel more energetic after spending time with a group of people.</p>
@@ -227,6 +227,67 @@
       </form>
 
       </div>
+
+      <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="../app/data/friends">API Friends List</a>
+                 | 
+                <a href="https://github.com/kknape/friend_finder">Git Hub Repo</a>
+            </p>
+
+        </div>
+      </footer>
     </div>
+
+    <script>
+    //capture user inputs
+    $("#submit").on("click", function(event) {
+    event.preventDefault();
+
+    // Here we grab the form elements
+    var newFriend = {
+      name: $("#name").val().trim(),
+      imgLink: $("#imgLink").val().trim(),
+      q1: $("#q1").val(),
+      q2: $("#q2").val(),
+      q3: $("#q3").val(),
+      q4: $("#q4").val(),
+      q5: $("#q5").val(),
+      q6: $("#q6").val(),
+      q7: $("#q7").val(),
+      q8: $("#q8").val(),
+      q9: $("#q9").val(),
+      q10: $("#q10").val(),
+      };
+
+      console.log(newFriend);
+
+    //post using api route
+ 
+      $.post("/api/friends", newFriend,
+      function(data) {
+        // Clear the form when submitting
+        $("#reserve-name").val("");
+        $("#reserve-phone").val("");
+        $("#reserve-email").val("");
+        $("#reserve-unique-id").val("");
+        $("#name").val("")
+        $("#imgLink").val("")
+        $("#q1").val("")
+        $("#q2").val("")
+        $("#q3").val("")
+        $("#q4").val("")
+        $("#q5").val("")
+        $("#q6").val("")
+        $("#q7").val("")
+        $("#q8").val("")
+        $("#q9").val("")
+        $("#q10").val("")
+      });
+    });
+
+    </script>
+
 </body>
 </html>
