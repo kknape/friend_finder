@@ -8,7 +8,7 @@
 var friendsArray = [
         {
         name:"Rachel",
-        photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        imgLink:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
         scores:[
             4,
             2,
@@ -24,7 +24,7 @@ var friendsArray = [
         },
         {
           name:"Monica",
-          photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+          imgLink:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
           scores:[
               3,
               4,
@@ -40,7 +40,7 @@ var friendsArray = [
           },
           {
             name:"Phoebe",
-            photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+            imgLink:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
             scores:[
                 5,
                 1,
@@ -56,7 +56,7 @@ var friendsArray = [
             }, 
           {
               name:"Joey",
-              photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+              imgLink:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
               scores:[
                   4,
                   2,
@@ -72,7 +72,7 @@ var friendsArray = [
               },
               {
                 name:"Chandler",
-                photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+                imgLink:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
                 scores:[
                     3,
                     4,
@@ -88,7 +88,7 @@ var friendsArray = [
                 },
                 {
                   name:"Ross",
-                  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+                  imgLink:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
                   scores:[
                       2,
                       4,
