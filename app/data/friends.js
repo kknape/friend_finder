@@ -7,9 +7,9 @@
 
 var friendsArray = [
         {
-        "name":"Rachel",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-        "scores":[
+        name:"Rachel",
+        photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        scores:[
             4,
             2,
             2,
@@ -23,9 +23,9 @@ var friendsArray = [
             ]
         },
         {
-          "name":"Monica",
-          "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-          "scores":[
+          name:"Monica",
+          photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+          scores:[
               3,
               4,
               3,
@@ -39,9 +39,9 @@ var friendsArray = [
               ]
           },
           {
-            "name":"Phoebe",
-            "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-            "scores":[
+            name:"Phoebe",
+            photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+            scores:[
                 5,
                 1,
                 3,
@@ -55,9 +55,9 @@ var friendsArray = [
                 ]
             }, 
           {
-              "name":"Joey",
-              "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-              "scores":[
+              name:"Joey",
+              photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+              scores:[
                   4,
                   2,
                   4,
@@ -71,9 +71,9 @@ var friendsArray = [
                   ]
               },
               {
-                "name":"Chandler",
-                "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-                "scores":[
+                name:"Chandler",
+                photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+                scores:[
                     3,
                     4,
                     4,
@@ -87,9 +87,9 @@ var friendsArray = [
                     ]
                 },
                 {
-                  "name":"Ross",
-                  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-                  "scores":[
+                  name:"Ross",
+                  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+                  scores:[
                       2,
                       4,
                       3,
