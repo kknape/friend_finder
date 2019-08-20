@@ -231,7 +231,7 @@
       <footer class="footer">
         <div class="container">
             <p>
-                <a href="../app/data/friends">API Friends List</a>
+                <a href="api/friends">API Friends List</a>
                  | 
                 <a href="https://github.com/kknape/friend_finder">Git Hub Repo</a>
             </p>
@@ -249,16 +249,18 @@
     var newFriend = {
       name: $("#name").val().trim(),
       imgLink: $("#imgLink").val().trim(),
-      q1: $("#q1").val(),
-      q2: $("#q2").val(),
-      q3: $("#q3").val(),
-      q4: $("#q4").val(),
-      q5: $("#q5").val(),
-      q6: $("#q6").val(),
-      q7: $("#q7").val(),
-      q8: $("#q8").val(),
-      q9: $("#q9").val(),
-      q10: $("#q10").val(),
+      scores: [ 
+        parseInt($("#q1").val()),
+        parseInt($("#q2").val()),
+        parseInt($("#q3").val()),
+        parseInt($("#q4").val()),
+        parseInt($("#q5").val()),
+        parseInt($("#q6").val()),
+        parseInt($("#q7").val()),
+        parseInt($("#q8").val()),
+        parseInt($("#q9").val()),
+        parseInt($("#q10").val())
+      ]
       };
 
       console.log(newFriend);

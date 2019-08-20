@@ -21,7 +21,9 @@ module.exports = function(app) {
    // API GET Requests
   // A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
         app.get("/api/friends", function(req, res) {
+          console.log("HEllo2");
             res.json(friendData);
+
         });
 
   // A POST route will add newFriend to the Friends array 
@@ -31,5 +33,6 @@ module.exports = function(app) {
             res.json(true);    
             console.log(friendData);  
             });
-        }
+        };
       //  console.log(friendData);
+      
