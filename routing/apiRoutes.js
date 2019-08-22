@@ -40,17 +40,25 @@ module.exports = function(app) {
          //   friendData.push();
         //    res.json(true);    
         //    console.log(friendData); 
+var compatibleF = {};
 
         for(var i = 0; i < friendData.length; i++){
+         
           var totalDif =0;
 
           for (var j=0; j<friendData[i].scores.length; j++) {
             var diff = Math.abs(newF.scores[j] - friendData[i].scores[j]);
             totalDif += diff;
           }
-          console.log(totalDif);
+          if (i===0) {
+            compatibleF={index: i, totalDif: totalDif};
+          } else {
+            if (totalDif < compatibleF.totalDif) {
+              compatibleF={index: i, totalDif: totalDif};
+            }
+          }         
         }
-
+        console.log(compatibleF);
             });
         };
       //  console.log(friendData);
