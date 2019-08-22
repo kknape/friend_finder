@@ -105,7 +105,7 @@ var friendsArray = [
       ]
 
 
-module.exports = friendsArray;
+
 /*
 Determine the user's most compatible friend using the following as a guide:
 
@@ -121,3 +121,10 @@ Determine the user's most compatible friend using the following as a guide:
 7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
    * The modal should display both the name and picture of the closest match.
 */
+
+
+//for (var i = 0; i<friendsArray.length; i++){
+//  console.log(friendsArray[i].scores);
+//}
+
+module.exports = friendsArray;

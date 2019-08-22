@@ -21,17 +21,36 @@ module.exports = function(app) {
    // API GET Requests
   // A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
         app.get("/api/friends", function(req, res) {
-          console.log("HEllo2");
-            res.json(friendData);
-
+            res.json(friendData); 
         });
+
+
+//compute matching algorithm
+//        app.get("/api/friends", (req, res) =>{
+//            return res.json(friendData.scores);
+//            console.log(friendData); 
+//       });
 
   // A POST route will add newFriend to the Friends array 
       //  app.post("/api/friends", newFriend)
       app.post("/api/friends", function (req, res) { 
-            friendData.push(req.body);
-            res.json(true);    
-            console.log(friendData);  
+
+        var newF = req.body
+        console.log(newF);
+         //   friendData.push();
+        //    res.json(true);    
+        //    console.log(friendData); 
+
+        for(var i = 0; i < friendData.length; i++){
+          var totalDif =0;
+
+          for (var j=0; j<friendData[i].scores.length; j++) {
+            var diff = Math.abs(newF.scores[j] - friendData[i].scores[j]);
+            totalDif += diff;
+          }
+          console.log(totalDif);
+        }
+
             });
         };
       //  console.log(friendData);
