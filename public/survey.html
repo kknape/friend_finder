@@ -219,28 +219,45 @@
                   </div>                       
                 </div>
             </div>
-      <!--End Questions-->
-        
+      <!--End Questions-->        
       <!--Survey Ends Here-->
-      <!--SUBMIT-->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
-      </form>
-
+      <!--SUBMIT button-->
+         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+        </form>
       </div>
-
       <footer class="footer">
         <div class="container">
-            <p>
-                <a href="api/friends">API Friends List</a>
-                 | 
+            <p> <a href="api/friends">API Friends List</a>
                 <a href="https://github.com/kknape/friend_finder">Git Hub Repo</a>
             </p>
-
         </div>
       </footer>
     </div>
 
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your Bestie Match</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id=bestie-match></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <script>
+    //import friends data
+   // 
+
     //capture user inputs
     $("#submit").on("click", function(event) {
     event.preventDefault();
@@ -262,17 +279,25 @@
         parseInt($("#q10").val())
       ]
       };
-
       console.log(newFriend);
 
       var currentURL = window.location.origin;
-    //post using api route
- 
+    //post newFriend data using api route
       $.post(currentURL + "/api/friends", newFriend,
       function(data) {
        if (data=true) {
-         alert ("Your answers have been submitted.");
+
+
+
+        $('#myModal').on('shown.bs.modal', function () {
+         $('#myInput').trigger('focus')
+          })
+      
+          // alert ("Your answers have been submitted.");
+         
        }
+
+              
 
         //clear form after results are posted
         $("#name").val("")
@@ -290,6 +315,12 @@
       });
       return false;
     });
+
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+
+
 
     </script>
 

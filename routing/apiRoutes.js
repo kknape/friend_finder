@@ -40,7 +40,7 @@ module.exports = function(app) {
          //   friendData.push();
         //    res.json(true);    
         //    console.log(friendData); 
-var compatibleF = {};
+        var compatibleF = {};
 
         for(var i = 0; i < friendData.length; i++){
          
@@ -58,8 +58,17 @@ var compatibleF = {};
             }
           }         
         }
-        console.log(compatibleF);
+
+        var friendsArray = require("../data/friends.js");
+
+        var bestieMatch = friendsArray[compatibleF.index]
+
+      // Add new friend to friends data
+     //   friendsArray.push(newF);
+     
+        //send match results to clinet, modal 
+        res.json(bestieMatch);
+        //res.send
             });
         };
       //  console.log(friendData);
-      
