@@ -1,14 +1,10 @@
-// ===============================================================================
-// DATA
-// Below data will hold all of the friends who have completed a survey in an array.
-// Will add some "friends" to get started.
-
-//application's data as an array of objects. Each of these objects should roughly follow the format below;
+// Application's DATA
+//Current Friend data for application saved as an array of objects. 
 
 var friendsArray = [
         {
         name:"Rachel",
-        imgLink:"ttps://via.placeholder.com/150",
+        imgLink:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJAjmJZuzlQq30imAYlFC5dt1NUkT8sIfvCViHdaMYYHpJqy_A9w",
         scores:[
             4,
             2,
@@ -24,7 +20,7 @@ var friendsArray = [
         },
         {
           name:"Monica",
-          imgLink:"https://via.placeholder.com/150",
+          imgLink:"https://pbs.twimg.com/profile_images/1008517744499798017/ExevRwMG_400x400.jpg",
           scores:[
               3,
               4,
@@ -40,7 +36,7 @@ var friendsArray = [
           },
           {
             name:"Phoebe",
-            imgLink:"https://via.placeholder.com/150",
+            imgLink:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYqjHzmN5r5zay_0JbiBRPKyuzqhC53xgY6HtnxNOb0i5cV2-5",
             scores:[
                 5,
                 1,
@@ -56,7 +52,7 @@ var friendsArray = [
             }, 
           {
               name:"Joey",
-              imgLink:"https://via.placeholder.com/150",
+              imgLink:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/joey-tribianni-1491992391.jpg?crop=1.00xw:0.958xh;0,0&resize=480:*",
               scores:[
                   4,
                   2,
@@ -72,7 +68,7 @@ var friendsArray = [
               },
               {
                 name:"Chandler",
-                imgLink:"https://via.placeholder.com/150",
+                imgLink:"https://66.media.tumblr.com/b551a678cf459272a4d39d917d9f3e63/tumblr_opaq4tU3rb1w320ago1_250.png",
                 scores:[
                     3,
                     4,
@@ -88,7 +84,7 @@ var friendsArray = [
                 },
                 {
                   name:"Ross",
-                  imgLink:"https://via.placeholder.com/150",
+                  imgLink:"https://m.media-amazon.com/images/M/MV5BMTkxNjU3MjU3NF5BMl5BanBnXkFtZTgwMzcxMzYzMzE@._V1_UY268_CR87,0,182,268_AL_.jpg",
                   scores:[
                       2,
                       4,
