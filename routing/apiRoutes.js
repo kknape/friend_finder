@@ -59,14 +59,14 @@ module.exports = function(app) {
           }         
         }
 
-        var friendsArray = require("../data/friends.js");
+        var friendsArray = require("../app/data/friends.js");
 
         var bestieMatch = friendsArray[compatibleF.index]
-
+        console.log(bestieMatch);
       // Add new friend to friends data
      //   friendsArray.push(newF);
      
-        //send match results to clinet, modal 
+        //send match results to client (modal)
         res.json(bestieMatch);
         //res.send
             });

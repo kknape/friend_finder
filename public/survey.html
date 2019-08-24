@@ -234,17 +234,19 @@
       </footer>
     </div>
 
-    <div class="modal" tabindex="-1" role="dialog">
+    <!--bootstrap modal-->
+    <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="resultsModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Your Bestie Match</h5>
+            <h5 class="modal-title" id="resultsModalLabel">Best Match</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p id=bestie-match></p>
+            <h2 id="bestieName"></h2>
+            <img id="bestieImg" src="#">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -255,14 +257,11 @@
 
 
     <script>
-    //import friends data
-   // 
-
-    //capture user inputs
+// On click of submit button...
     $("#submit").on("click", function(event) {
     event.preventDefault();
 
-    // Here we grab the form elements
+//Capture user inputs
     var newFriend = {
       name: $("#name").val().trim(),
       imgLink: $("#imgLink").val().trim(),
@@ -279,27 +278,28 @@
         parseInt($("#q10").val())
       ]
       };
+
       console.log(newFriend);
 
-      var currentURL = window.location.origin;
-    //post newFriend data using api route
-      $.post(currentURL + "/api/friends", newFriend,
+//post newFriend data using api route
+    //  var currentURL = window.location.origin;
+    $.post("/api/friends", newFriend,
+    //  $.post(currentURL + "/api/friends", newFriend,
       function(data) {
-       if (data=true) {
+       {
 
+// var bestie = JSON.parse(bestieMatch);
+// document.getElementById("bestieName").innerHTML = friends.name;
+      $("#bestieName").text(data.name);
+      $("#bestieImg").attr("src", data.imgLink);
 
+//Show modal w/best match
+      $("#resultsModal").modal("toggle");
 
-        $('#myModal').on('shown.bs.modal', function () {
-         $('#myInput').trigger('focus')
-          })
-      
-          // alert ("Your answers have been submitted.");
-         
        }
+      })
 
-              
-
-        //clear form after results are posted
+//clear form after results are posted
         $("#name").val("")
         $("#imgLink").val("")
         $("#q1").val("Select one.")
@@ -313,14 +313,6 @@
         $("#q9").val("Select one.")
         $("#q10").val("Select one.")
       });
-      return false;
-    });
-
-    $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    })
-
-
 
     </script>
 
