@@ -25,7 +25,7 @@ The Friend Finder is a compatibility based app. It will take the results from a 
   - server.js
   
 ##How to Use the App
- - Home page is displayed. Click "Take the Survey" button.
+ - Home page is displayed. Click "Take the Survey" button. 
    - ![User Selects Prompt](https://kknape.github.io/friend_finder/images/screenshot_home.png)
  - On the survey page, user enter their name,a url to an image and answers the survey questions.
     - ![User Selects Prompt](https://kknape.github.io/friend_finder/images/screenshot_survey1.png)
@@ -33,3 +33,5 @@ The Friend Finder is a compatibility based app. It will take the results from a 
     - ![User Selects Prompt](https://kknape.github.io/friend_finder/images/screenshot_survey2.png)
  - User sees their best match!
     - ![User Selects Prompt](https://kknape.github.io/friend_finder/images/screenshot_yourFriendMatch.png)
+ - Home and Survey pages also include a links to the Friends API data and the project Git Hub Repo.
+    - ![User Selects Prompt](https://kknape.github.io/friend_finder/images/screenshot_apiLink.png)
